@@ -65,12 +65,12 @@ public class RadianMeasureVersion1_pure {
     
 
     public static double tan(double a) {
-    	double[] bernoulli=new double[10];
+    	double[] bernoulli=new double[11];
     	bernoulli=Bernoulli();
     	double temp;
     	double sum=0;
     	for(int i=1;i<=10;i++) {
-    		temp=power(2,2*i)*(power(2,2*i)-1)*bernoulli[i]*power(a,2*i-1)/factorial(i);
+    		temp=power(2,2*i)*(power(2,2*i)-1)*bernoulli[i]*power(a,2*i-1)/factorial(2*i);
     		sum=sum+temp;
     	}
     	return sum;
